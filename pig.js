@@ -8,7 +8,7 @@ let scores = { // object that initializes scores
 }
 
 async function wakeUpServer() {
-    await fetch('server-url/api/roll-dice');
+    await fetch('https://server-dice-roller-2-hnc3ehc9bjefhhe5.centralus-01.azurewebsites.net/api/roll-dice');
 }
 
 window.onload = async () => {
@@ -107,7 +107,7 @@ async function computerTurn() {
 
 async function rollDie() {
     try {
-        const response = await fetch('server-url/api/roll-dice');
+        const response = await fetch('https://server-dice-roller-2-hnc3ehc9bjefhhe5.centralus-01.azurewebsites.net/api/roll-dice');
         const data = await response.json();
         return data.roll;
     } catch (error) {
